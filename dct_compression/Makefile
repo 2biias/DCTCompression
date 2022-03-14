@@ -1,0 +1,13 @@
+CONTIKI_PROJECT = dct_compression
+all: $(CONTIKI_PROJECT)
+
+TARGET_LIBFILES = -lm
+MAKE_MAC := MAKE_MAC_NULLMAC
+MAKE_ROUTING := MAKE_ROUTING_NULLROUTING
+MAKE_NET := MAKE_NET_NULLNET
+CFLAGS += -Ofast
+CFLAGS += -std=gnu11
+
+CONTIKI = /home/vagrant/contiki-ng
+
+include $(CONTIKI)/Makefile.include
